@@ -186,7 +186,7 @@ variable "clusters" {
         vlan_name                      = "ALPHA"
         vlan_id                        = 100
         assign_vlan                    = true
-        create_vlan                    = true
+        create_vlan                    = false
         ipv4                           = {
           subnet_prefix                = "10.0.1"
           pod_cidr                     = "10.8.0.0/16"
@@ -310,7 +310,7 @@ variable "clusters" {
         bridge                         = "vmbr0"
         dns_search_domain              = "lan"
         assign_vlan                    = true
-        create_vlan                    = true
+        create_vlan                    = false
         vlan_name                      = "BETA"
         vlan_id                        = 200
         ipv4                           = {
@@ -436,7 +436,7 @@ variable "clusters" {
         bridge                         = "vmbr0"
         dns_search_domain              = "lan"
         assign_vlan                    = true
-        create_vlan                    = true
+        create_vlan                    = false
         vlan_name                      = "GAMMA"
         vlan_id                        = 600
         ipv4                           = {
