@@ -1,8 +1,8 @@
 variable "proxmox_host" {
-    default = "10.0.0.100"
+    default = "adam.nerv.home.arpa"
 }
 variable "proxmox_node" {
-    default = "Citadel"
+    default = "adam"
     description = "The name of the node that contains the template vm"
 }
 variable "template_vm_id" {
