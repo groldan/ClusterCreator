@@ -1,8 +1,8 @@
 variable "proxmox_host" {
-    default = "adam.nerv.home.arpa"
+    default = "eva00.nerv.home.arpa"
 }
 variable "proxmox_node" {
-    default = "adam"
+    default = "eva00"
     description = "The name of the node that contains the template vm"
 }
 variable "template_vm_id" {

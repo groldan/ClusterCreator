@@ -223,7 +223,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count      = 3
-          pve_nodes  = [ "adam", "eva00", "eva01" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 16
@@ -241,7 +241,7 @@ variable "clusters" {
         }
         etcd = {
           count      = 0
-          pve_nodes  = [ "adam", "eva00", "eva01" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -273,7 +273,7 @@ variable "clusters" {
         }
         gpu = {
           count      = 0
-          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
@@ -349,7 +349,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count      = 3
-          pve_nodes  = [ "adam", "eva00", "eva01"]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 4
@@ -367,7 +367,7 @@ variable "clusters" {
         }
         etcd = {
           count      = 0
-          pve_nodes  = [ "adam", "eva00", "eva01"]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -399,7 +399,7 @@ variable "clusters" {
         }
         gpu = {
           count      = 0
-          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
@@ -475,7 +475,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count    = 3
-          pve_nodes  = [ "adam", "eva00", "eva01" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 4
@@ -493,7 +493,7 @@ variable "clusters" {
         }
         etcd = {
           count    = 0
-          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 2
@@ -507,7 +507,7 @@ variable "clusters" {
         }
         general = {
           count    = 5
-          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 8
@@ -525,7 +525,7 @@ variable "clusters" {
         }
         gpu = {
           count      = 0
-          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
