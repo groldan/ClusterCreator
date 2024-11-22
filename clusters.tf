@@ -230,7 +230,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 16384
           disks      = [
-            { index = 0, datastore = "nvmes", size = 100, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 100, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 110
           labels = {
@@ -248,7 +248,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 2048
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 120
           devices    = []
@@ -262,7 +262,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 4096
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 130
           labels = {
@@ -280,7 +280,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 2048
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 190
           labels = {
@@ -356,7 +356,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 4096
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 110
           labels = {
@@ -374,7 +374,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 2048
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 120
           devices    = []
@@ -388,7 +388,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 4096
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 130
           labels = {
@@ -406,7 +406,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 2048
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 190
           labels = {
@@ -482,7 +482,7 @@ variable "clusters" {
           sockets  = 1
           memory   = 4096
           disks    = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip = 110
           labels   = {
@@ -500,7 +500,7 @@ variable "clusters" {
           sockets  = 1
           memory   = 2048
           disks    = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip = 120
           devices  = []
@@ -514,7 +514,7 @@ variable "clusters" {
           sockets  = 1
           memory   = 4096
           disks    = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip = 130
           labels   = {
@@ -532,7 +532,7 @@ variable "clusters" {
           sockets    = 1
           memory     = 2048
           disks      = [
-            { index = 0, datastore = "nvmes", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
+            { index = 0, datastore = "local-zfs", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
           start_ip   = 190
           labels = {
