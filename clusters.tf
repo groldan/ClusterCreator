@@ -222,8 +222,8 @@ variable "clusters" {
       }
       node_classes = {
         apiserver = {
-          count      = 1
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count      = 3
+          pve_nodes  = [ "adam", "eva00", "eva01" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 16
@@ -241,7 +241,7 @@ variable "clusters" {
         }
         etcd = {
           count      = 0
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -254,8 +254,8 @@ variable "clusters" {
           devices    = []
         }
         general = {
-          count      = 0
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count      = 3
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 8
@@ -273,7 +273,7 @@ variable "clusters" {
         }
         gpu = {
           count      = 0
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
@@ -348,8 +348,8 @@ variable "clusters" {
       }
       node_classes = {
         apiserver = {
-          count      = 1
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count      = 3
+          pve_nodes  = [ "adam", "eva00", "eva01"]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 4
@@ -367,7 +367,7 @@ variable "clusters" {
         }
         etcd = {
           count      = 0
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01"]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -380,8 +380,8 @@ variable "clusters" {
           devices    = []
         }
         general = {
-          count      = 2
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count      = 3
+          pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 8
@@ -399,7 +399,7 @@ variable "clusters" {
         }
         gpu = {
           count      = 0
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
@@ -475,7 +475,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count    = 3
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 4
@@ -492,8 +492,8 @@ variable "clusters" {
           devices = []
         }
         etcd = {
-          count    = 3
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count    = 0
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 2
@@ -507,7 +507,7 @@ variable "clusters" {
         }
         general = {
           count    = 5
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 8
@@ -524,8 +524,8 @@ variable "clusters" {
           devices = []
         }
         gpu = {
-          count      = 2
-          pve_nodes  = [ "Citadel", "Acropolis", "Parthenon" ]
+          count      = 0
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "host"
           cores      = 2
