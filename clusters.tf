@@ -176,8 +176,8 @@ variable "clusters" {
       start_on_proxmox_boot            = false
       max_pods_per_node                = 512
       ssh = {
-        ssh_user                       = "line6"
-        ssh_home                       = "/home/line6"
+        ssh_user                       = "groldan"
+        ssh_home                       = "/home/groldan"
         ssh_key_type                   = "ssh-ed25519"
       }
       networking                       = {
@@ -302,8 +302,8 @@ variable "clusters" {
       start_on_proxmox_boot            = false
       max_pods_per_node                = 512
       ssh = {
-        ssh_user                       = "line6"
-        ssh_home                       = "/home/line6"
+        ssh_user                       = "groldan"
+        ssh_home                       = "/home/groldan"
         ssh_key_type                   = "ssh-ed25519"
       }
       networking                       = {
@@ -428,8 +428,8 @@ variable "clusters" {
       start_on_proxmox_boot            = false
       max_pods_per_node                = 512
       ssh                              = {
-        ssh_user                       = "line6"
-        ssh_home                       = "/home/line6"
+        ssh_user                       = "groldan"
+        ssh_home                       = "/home/groldan"
         ssh_key_type                   = "ssh-ed25519"
       }
       networking                       = {
