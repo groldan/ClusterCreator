@@ -182,17 +182,17 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "lan"
+        dns_search_domain              = "nerv.home.arpa"
         vlan_name                      = "ALPHA"
-        vlan_id                        = 100
-        assign_vlan                    = true
+        vlan_id                        = 0
+        assign_vlan                    = false
         create_vlan                    = false
         ipv4                           = {
-          subnet_prefix                = "10.0.1"
+          subnet_prefix                = "10.0.0"
           pod_cidr                     = "10.8.0.0/16"
           svc_cidr                     = "10.9.0.0/16"
-          dns1                         = "10.0.1.3"
-          dns2                         = "10.0.1.4"
+          dns1                         = "10.0.0.1"
+          dns2                         = "10.0.0.2"
         }
         ipv6                           = {
           enabled                      = false
@@ -205,7 +205,7 @@ variable "clusters" {
         }
         kube_vip = {
           kube_vip_version             = "0.8.3"
-          vip                          = "10.0.1.100"
+          vip                          = "10.0.0.100"
           vip_hostname                 = "alpha-api-server"
           vip_interface                = "eth0"
           use_ipv6                     = false
@@ -308,17 +308,17 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "lan"
-        assign_vlan                    = true
+        dns_search_domain              = "nerv.home.arpa"
+        assign_vlan                    = false
         create_vlan                    = false
         vlan_name                      = "BETA"
-        vlan_id                        = 200
+        vlan_id                        = 0
         ipv4                           = {
-          subnet_prefix                = "10.0.2"
+          subnet_prefix                = "10.0.0"
           pod_cidr                     = "10.12.0.0/16"
           svc_cidr                     = "10.13.0.0/16"
-          dns1                         = "10.0.2.3"
-          dns2                         = "10.0.2.4"
+          dns1                         = "10.0.0.1"
+          dns2                         = "10.0.0.2"
         }
         ipv6                           = {
           enabled                      = false
@@ -434,17 +434,17 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "lan"
-        assign_vlan                    = true
+        dns_search_domain              = "nerv.home.arpa"
+        assign_vlan                    = false
         create_vlan                    = false
         vlan_name                      = "GAMMA"
-        vlan_id                        = 600
+        vlan_id                        = 0
         ipv4                           = {
-          subnet_prefix                = "10.0.3"
+          subnet_prefix                = "10.0.0"
           pod_cidr                     = "10.16.0.0/16"
           svc_cidr                     = "10.17.0.0/16"
-          dns1                         = "10.0.3.3"
-          dns2                         = "10.0.3.4"
+          dns1                         = "10.0.0.1"
+          dns2                         = "10.0.0.2"
         }
         ipv6                           = {
           enabled                      = false
