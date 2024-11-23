@@ -177,8 +177,9 @@ variable "clusters" {
       max_pods_per_node                = 512
       ssh = {
         ssh_user                       = "groldan"
-        ssh_home                       = "/home/groldan"
+        ssh_home                       = "/Users/groldan"
         ssh_key_type                   = "ssh-ed25519"
+        ssh_private_key                = "/Users/groldan/.ssh/id_ed25519_passwordless"
       }
       networking                       = {
         bridge                         = "vmbr0"
