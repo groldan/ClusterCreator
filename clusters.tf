@@ -332,7 +332,7 @@ variable "clusters" {
         }
         kube_vip = {
           kube_vip_version             = "0.8.3"
-          vip                          = "10.0.2.100"
+          vip                          = "10.0.0.120"
           vip_hostname                 = "beta-api-server"
           vip_interface                = "eth0"
           use_ipv6                     = false
@@ -458,7 +458,7 @@ variable "clusters" {
         }
         kube_vip = {
           kube_vip_version             = "0.8.3"
-          vip                          = "10.0.3.100"
+          vip                          = "10.0.0.130"
           vip_hostname                 = "gamma-api-server"
           vip_interface                = "eth0"
           use_ipv6                     = false
@@ -485,7 +485,7 @@ variable "clusters" {
           disks    = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip = 130
+          start_ip = 131
           labels   = {
             "nodeclass" = "apiserver"
           }
