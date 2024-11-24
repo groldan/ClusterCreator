@@ -224,7 +224,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count      = 1
-          pve_nodes  = [ "eva00" ]
+          pve_nodes  = [ "adam" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 4
@@ -233,7 +233,7 @@ variable "clusters" {
           disks      = [
             { index = 0, datastore = "local", size = 100, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 110
+          start_ip   = 101
           labels = {
             "nodeclass" = "apiserver"
           }
@@ -242,7 +242,7 @@ variable "clusters" {
         }
         etcd = {
           count      = 0
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -251,21 +251,21 @@ variable "clusters" {
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 120
+          start_ip   = 102
           devices    = []
         }
         general = {
-          count      = 1
+          count      = 3
           pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 16
           sockets    = 1
-          memory     = 40960
+          memory     = 32768
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 130
+          start_ip   = 103
           labels = {
             "nodeclass" = "general"
           }
@@ -283,7 +283,7 @@ variable "clusters" {
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 190
+          start_ip   = 107
           labels = {
             "nodeclass" = "gpu"
           }
@@ -350,7 +350,7 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count      = 3
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 4
@@ -359,7 +359,7 @@ variable "clusters" {
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 110
+          start_ip   = 121
           labels = {
             "nodeclass" = "apiserver"
           }
@@ -367,8 +367,8 @@ variable "clusters" {
           devices = []
         }
         etcd = {
-          count      = 0
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          count      = 3
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores      = 2
@@ -377,21 +377,21 @@ variable "clusters" {
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 120
+          start_ip   = 124
           devices    = []
         }
         general = {
-          count      = 0
+          count      = 3
           pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
-          cores      = 8
+          cores      = 32
           sockets    = 1
-          memory     = 4096
+          memory     = 65536
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip   = 130
+          start_ip   = 127
           labels = {
             "nodeclass" = "general"
           }
@@ -426,7 +426,7 @@ variable "clusters" {
       cluster_name                     = "gamma"
       cluster_id                       = 3
       kubeconfig_file_name             = "gamma.yml"
-      start_on_proxmox_boot            = false
+      start_on_proxmox_boot            = true
       max_pods_per_node                = 512
       ssh                              = {
         ssh_user                       = "groldan"
@@ -476,16 +476,16 @@ variable "clusters" {
       node_classes = {
         apiserver = {
           count    = 3
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
           cores    = 4
           sockets  = 1
-          memory   = 4096
+          memory   = 8192
           disks    = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip = 110
+          start_ip = 130
           labels   = {
             "nodeclass" = "apiserver"
           }
@@ -493,31 +493,31 @@ variable "clusters" {
           devices = []
         }
         etcd = {
-          count    = 0
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          count    = 3
+          pve_nodes  = [ "adam", "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
-          cores    = 2
+          cores    = 4
           sockets  = 1
           memory   = 2048
           disks    = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip = 120
+          start_ip = 135
           devices  = []
         }
         general = {
-          count    = 0
+          count    = 3
           pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
-          cores    = 8
+          cores    = 64
           sockets  = 1
-          memory   = 4096
+          memory   = 94208
           disks    = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
-          start_ip = 130
+          start_ip = 140
           labels   = {
             "nodeclass" = "general"
           }
