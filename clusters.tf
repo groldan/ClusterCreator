@@ -173,7 +173,7 @@ variable "clusters" {
       cluster_name                     = "alpha"
       cluster_id                       = 1
       kubeconfig_file_name             = "alpha.yml"
-      start_on_proxmox_boot            = false
+      start_on_proxmox_boot            = true
       max_pods_per_node                = 512
       ssh = {
         ssh_user                       = "groldan"
@@ -223,11 +223,11 @@ variable "clusters" {
       }
       node_classes = {
         apiserver = {
-          count      = 3
-          pve_nodes  = [ "eva00", "eva01", "eva02" ]
+          count      = 1
+          pve_nodes  = [ "eva00" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
-          cores      = 16
+          cores      = 4
           sockets    = 1
           memory     = 16384
           disks      = [
@@ -255,13 +255,13 @@ variable "clusters" {
           devices    = []
         }
         general = {
-          count      = 0
+          count      = 1
           pve_nodes  = [ "eva00", "eva01", "eva02" ]
           machine    = "q35"
           cpu_type   = "x86-64-v2-AES"
-          cores      = 8
+          cores      = 16
           sockets    = 1
-          memory     = 4096
+          memory     = 40960
           disks      = [
             { index = 0, datastore = "local", size = 20, backup = true, cache_mode = "none", aio_mode = "io_uring" }
           ]
