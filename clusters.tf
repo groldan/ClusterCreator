@@ -183,7 +183,7 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "nerv.home.arpa pve.nerv.home.arpa"
+        dns_search_domain              = "pve.nerv.home.arpa"
         vlan_name                      = "ALPHA"
         vlan_id                        = 0
         assign_vlan                    = true
@@ -309,7 +309,7 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "nerv.home.arpa pve.nerv.home.arpa"
+        dns_search_domain              = "pve.nerv.home.arpa"
         assign_vlan                    = true
         create_vlan                    = false
         vlan_name                      = "BETA"
@@ -435,7 +435,7 @@ variable "clusters" {
       }
       networking                       = {
         bridge                         = "vmbr0"
-        dns_search_domain              = "nerv.home.arpa pve.nerv.home.arpa"
+        dns_search_domain              = "pve.nerv.home.arpa"
         assign_vlan                    = true
         create_vlan                    = false
         vlan_name                      = "GAMMA"
